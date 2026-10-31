@@ -1,0 +1,18 @@
+{
+  "company": "Apple Inc.",
+  "report": "FY2025 Form 10-K",
+  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "units": "USD millions",
+  "extraction": "Manually transcribed reported figures; historical snapshot",
+  "tables": {
+    "apple_product_revenue.csv": "p. 23, Products and Services Performance",
+    "apple_regional_revenue.csv": "p. 22, Segment Operating Performance",
+    "reported_net_sales": "p. 29, Consolidated Statements of Operations",
+    "fiscal_calendar": "p. 21, Fiscal Period"
+  },
+  "periods": [
+    {"year": 2023, "ended": "2023-09-30", "weeks": 53, "reported_net_sales_usd_m": 383285},
+    {"year": 2024, "ended": "2024-09-28", "weeks": 52, "reported_net_sales_usd_m": 391035},
+    {"year": 2025, "ended": "2025-09-27", "weeks": 52, "reported_net_sales_usd_m": 416161}
+  ]
+}
