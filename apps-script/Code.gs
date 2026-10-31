@@ -116,10 +116,10 @@ function buildAppleRevenueSummary() {
   out.getRange('A31').setValue('https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm');
   out.getRange('A33').setValue('Static reported inputs. This function calculates and formats the review; it does not fetch new filings.');
   const chart = out.newChart().setChartType(Charts.ChartType.LINE)
-    .addRange(out.getRange('A4:B7')).setNumHeaders(1).setPosition(4, 8, 0, 0)
+    .addRange(out.getRange('A4:B7')).setNumHeaders(1).setPosition(4, 6, 0, 0)
     .setOption('title', 'Annual net sales (USD millions)')
     .setOption('legend', {position: 'none'}).setOption('colors', ['#2463B5'])
-    .setOption('width', 510).setOption('height', 300).build();
+    .setOption('width', 420).setOption('height', 165).build();
   out.insertChart(chart);
   const negatives = SpreadsheetApp.newConditionalFormatRule().whenNumberLessThan(0)
     .setFontColor('#AE3B39').setRanges([out.getRange('C13:F17'), out.getRange('C22:F26')]).build();

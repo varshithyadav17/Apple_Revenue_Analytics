@@ -87,7 +87,7 @@ Reported inputs are blue. Headline results, chart series and quantitative commen
 
 Import the two CSVs into a Google spreadsheet as `Product CSV` and `Regional CSV`. Paste [Code.gs](apps-script/Code.gs) into the spreadsheet's Apps Script project, then run `buildAppleRevenueSummary`.
 
-The script validates both input tabs before rebuilding `Automated Summary`. It writes formula-linked annual, product and regional tables, formats the results and adds a sales chart. The [setup guide](docs/google-sheets-setup.md) includes expected output and troubleshooting.
+The script validates both input tabs before rebuilding `Automated Summary`. It writes formula-linked annual, product and regional tables, formats the results and adds a sales chart. `@OnlyCurrentDoc` limits its spreadsheet permission to the file where it is installed. The [setup guide](docs/google-sheets-setup.md) includes expected output and troubleshooting.
 
 ## Checks
 
@@ -98,7 +98,7 @@ node tests/apps-script.test.mjs
 
 The Python tests cover the reported totals, metric calculations, missing and duplicate categories, invalid amounts, reconciliation failure and report generation. The JavaScript tests check Apps Script input handling, formula references and summary construction using a local spreadsheet stub. They do not replace a run inside Google Sheets.
 
-The Excel workbook was checked for source consistency, formula errors, chart bindings and response to an input change. The Apps Script still needs authorization and an execution in the spreadsheet where it will be used.
+The Excel workbook was checked for source consistency, formula errors, chart bindings and response to an input change. The Apps Script was also run successfully in a native Google Sheet on **31 October 2026**. The live check covered totals, growth, revenue mix, contribution formulas, chart layout and a repeat run. See the [validation record](docs/validation.md).
 
 ## Source and scope
 
