@@ -1,3 +1,4 @@
+/** @OnlyCurrentDoc */
 // Import the two CSVs as tabs named Product CSV and Regional CSV, then run
 // buildAppleRevenueSummary. Source columns and reported controls are FY2023–FY2025.
 const APPLE_YEARS = [2023, 2024, 2025];
